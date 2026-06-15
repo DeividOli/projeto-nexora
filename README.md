@@ -10,16 +10,6 @@ A **Nexora** é uma plataforma web de gestão de investimentos pessoais. Este pr
 
 Projeto desenvolvido como atividade acadêmica na **FIAP**, aplicando conceitos de **HTML semântico**, **CSS responsivo** e **Tailwind CSS**.
 
----
-
-## 🖥️ Preview
-
-![Preview do projeto](./img/preview.png)
-
-> Tire um print da tela e salve como `preview.png` dentro da pasta `img/`
-
----
-
 ## ✨ Funcionalidades
 
 - 📊 Visualização de metas em andamento com barra de progresso
