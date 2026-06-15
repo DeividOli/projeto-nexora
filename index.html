@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Tailwind</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="bg-[#111111]">
+    <!-- ==================== NAV MOBILE ==================== -->
+    <nav class="fixed md:hidden">
+        <div class="flex justify-between items-center w-[90%] h-12.5 mx-auto bg-[#1C1C1C]">
+            <button class="cursor-pointer w-7 h-7 text-amber-50">&#9776;</button>
+
+            <div>
+                <img src="./img/Logo-nexora.png" alt="">
+            </div>
+
+            <div>
+                <div class="cursor-pointer">
+                    <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="#101010" />
+                        <circle cx="16" cy="12" r="5" fill="white" />
+                        <path d="M6 26c0-5.523 4.477-10 10-10s10 4.477 10 10" fill="white" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== NAV DESKTOP ==================== -->
+    <nav class="hidden md:flex items-center justify-between px-6 h-12">
+        <div class="mr-2 cursor-pointer">
+            <img src="./img/Logo-nexora.png" alt="Logo">
+        </div>
+        <div class="flex gap-20">
+            <span class="inline-flex items-center gap-1 cursor-pointer">Mercado
+                <svg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.59976 6.80266e-07L0.399555 5.08037e-08C0.326656 0.000152632 0.2552 0.0135801 0.192879 0.0388368C0.130557 0.0640934 0.0797289 0.100223 0.0458668 0.143336C0.0120042 0.18645 -0.00361124 0.234915 0.000702229 0.283514C0.00501569 0.332114 0.0290941 0.379007 0.0703457 0.419148L3.67045 3.89201C3.81965 4.036 4.17886 4.036 4.32847 3.89201L7.92857 0.419148C7.97024 0.379092 7.99468 0.332175 7.99922 0.283494C8.00377 0.234814 7.98826 0.186232 7.95436 0.143027C7.92047 0.0998223 7.8695 0.0636465 7.80698 0.0384307C7.74446 0.013215 7.67279 -7.63226e-05 7.59976 6.80266e-07Z"
+                        fill="#778698" />
+                </svg>
+            </span>
+            <span class="inline-flex items-center gap-1 cursor-pointer">Ações
+                <svg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.59976 6.80266e-07L0.399555 5.08037e-08C0.326656 0.000152632 0.2552 0.0135801 0.192879 0.0388368C0.130557 0.0640934 0.0797289 0.100223 0.0458668 0.143336C0.0120042 0.18645 -0.00361124 0.234915 0.000702229 0.283514C0.00501569 0.332114 0.0290941 0.379007 0.0703457 0.419148L3.67045 3.89201C3.81965 4.036 4.17886 4.036 4.32847 3.89201L7.92857 0.419148C7.97024 0.379092 7.99468 0.332175 7.99922 0.283494C8.00377 0.234814 7.98826 0.186232 7.95436 0.143027C7.92047 0.0998223 7.8695 0.0636465 7.80698 0.0384307C7.74446 0.013215 7.67279 -7.63226e-05 7.59976 6.80266e-07Z"
+                        fill="#778698" />
+                </svg>
+            </span>
+            <span class="ponteiro">Metas</span>
+            <span class="ponteiro">Carteira</span>
+            <span class="ponteiro">Simular</span>
+        </div>
+        <div class="cursor-pointer ml-1.5">
+            <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="#101010" />
+                <circle cx="16" cy="12" r="5" fill="white" />
+                <path d="M6 26c0-5.523 4.477-10 10-10s10 4.477 10 10" fill="white" />
+            </svg>
+        </div>
+    </nav>
+
+    <!--Container do metas e criar meta-->
+    <main class="grid grid-cols-1 justify-items-center mx-auto max-w-6xl px-4 gap-4 md:gap-2 md:grid-cols-2 lg:grid-cols-3">
+        <div
+            class="flex justify-between items-center w-100 rounded h-10 mt-16 px-2 col-span-1 md:col-span-2 md:w-full lg:col-span-3 lg:w-full">
+            <!--Frase metas em andamento-->
+            <span class="flex items-center h-10 w-50 font-bold text-lg text-amber-50">Metas em andamento</span>
+
+            <!--Botão Criar Meta-->
+            <button
+                class="w-30 h-8.5 bg-[#F97316] text-white cursor-pointer rounded font-semibold hover:bg-amber-500 duration-300">+
+                Criar meta
+            </button>
+        </div>
+
+        <!-- ==================== METAS EM ANDAMENTO ==================== -->
+        <!-- Card 1-->
+        <div class="estrutura-cards">
+            <!--BOTÃO EDITAR E EXCLUIR -->
+            <div class="flex self-end mr-3">
+                <span
+                    class="w-7 mr-2 border border-b-black bg-white/70 hover:bg-blue-200 duration-300 cursor-pointer">✏️</span>
+                <span
+                    class="w-7 cursor-pointer border border-b-black bg-white/70 hover:bg-red-200 duration-300">🗑️</span>
+            </div>
+
+            <!--icone relacionado a meta-->
+            <span class="text-4xl rounded-full mb-2">🎓</span>
+            <h3 class="text-[#E8F3EC] mb-4">Escola/Faculdade</h3>
+            <div class="w-full justify-center-2">
+                <span class="span-valor">R$ 1.850,00</span>
+                <span class="">R$ 12.000,00</span>
+            </div>
+
+            <!--CONTAINER DA BARRA DE PROGRESSO -->
+            <div class="w-[65%] bg-[#333333] rounded-full h-2 md:w-[68%] lg:w-[73%]">
+                <div class="bg-[#F97316] h-2 rounded-full w-[15%] md:w-[15%] lg:w-[15%]"></div>
+            </div>
+
+            <div>
+                <p>Faltam 10.150,00</p>
+            </div>
+        </div>
+
+        <!-- Card 2-->
+        <div class="estrutura-cards">
+            <!--BOTÃO EDITAR E EXCLUIR -->
+            <div class="flex self-end mr-3">
+                <span
+                    class="w-7 mr-2 border border-b-black bg-white/70 hover:bg-blue-200 duration-300 cursor-pointer">✏️</span>
+                <span
+                    class="w-7 cursor-pointer border border-b-black bg-white/70 hover:bg-red-200 duration-300">🗑️</span>
+            </div>
+
+            <!--icone relacionado a meta-->
+            <span class="text-4xl rounded-full mb-2">🏠</span>
+            <h3 class="mb-4 text-[#E8F3EC]">Compra de imovel</h3>
+            <div class="w-full justify-center-2">
+                <span class="span-valor">R$ 8.500,00</span>
+                <span>R$ 80.000,00</span>
+            </div>
+
+            <!--CONTAINER DA BARRA DE PROGRESSO -->
+            <div class="w-[65%] bg-[#333333] rounded-full h-2 md:w-[68%] lg:w-[73%]">
+                <div class="bg-[#F97316] h-2 rounded-full w-[10%] md:w-[10%] lg:w-[10%]"></div>
+            </div>
+
+            <div>
+                <p>Faltam R$ 71.500,00</p>
+            </div>
+
+        </div>
+
+        <!-- Card 3-->
+        <div class="estrutura-cards">
+            <!--BOTÃO EDITAR E EXCLUIR -->
+            <div class="flex self-end mr-3">
+                <span
+                    class="w-7 mr-2 border border-b-black bg-white/70 hover:bg-blue-200 duration-300 cursor-pointer">✏️</span>
+                <span
+                    class="w-7 cursor-pointer border border-b-black bg-white/70 hover:bg-red-200 duration-300">🗑️</span>
+            </div>
+
+            <!--icone relacionado a meta-->
+            <span class="text-4xl rounded-full mb-2">✈️</span>
+            <h3 class="mb-4 text-[#E8F3EC]">Viagem dos sonhos</h3>
+            <div class="w-full justify-center-2">
+                <span class="span-valor">R$ 3.200,00</span>
+                <span>R$ 6.000,00</span>
+            </div>
+
+            <!--CONTAINER DA BARRA DE PROGRESSO -->
+            <div class="w-[65%] bg-[#333333] rounded-full h-2 md:w-[68%] lg:w-[73%]">
+                <div class="bg-[#F97316] h-2 rounded-full w-[53%] md:w-[53%] lg:w-[53%]"></div>
+            </div>
+
+            <div>
+                <p>Faltam R$ 2.800,00</p>
+            </div>
+        </div>
+
+        <!-- Card 4-->
+        <div class="estrutura-cards">
+            <!--BOTÃO EDITAR E EXCLUIR -->
+            <div class="flex self-end mr-3">
+                <span
+                    class="w-7 mr-2 border border-b-black bg-white/70 hover:bg-blue-200 duration-300 cursor-pointer">✏️</span>
+                <span
+                    class="w-7 cursor-pointer border border-b-black bg-white/70 hover:bg-red-200 duration-300">🗑️</span>
+            </div>
+
+            <!--icone relacionado a meta-->
+            <span class="text-4xl rounded-full mb-2">🚗</span>
+            <h3 class="mb-4 text-[#E8F3EC]">Carro Novo</h3>
+            <div class="w-full justify-center-2">
+                <span class="span-valor">R$ 12.000,00</span>
+                <span>R$ 45.000,00</span>
+            </div>
+
+            <!--CONTAINER DA BARRA DE PROGRESSO -->
+            <div class="w-[65%] bg-[#333333] rounded-full h-2 md:w-[68%] lg:w-[73%]">
+                <div class="bg-[#F97316] h-2 rounded-full w-[26%] md:w-[26%] lg:w-[26%]"></div>
+            </div>
+
+            <div>
+                <p>Faltam R$ 33.000,00</p>
+            </div>
+        </div>
+
+        <!-- Card 5-->
+        <div class="estrutura-cards">
+            <!--BOTÃO EDITAR E EXCLUIR -->
+            <div class="flex self-end mr-3">
+                <span
+                    class="w-7 mr-2 border border-b-black bg-white/70 hover:bg-blue-200 duration-300 cursor-pointer">✏️</span>
+                <span
+                    class="w-7 cursor-pointer border border-b-black bg-white/70 hover:bg-red-200 duration-300">🗑️</span>
+            </div>
+
+            <!--icone relacionado a meta-->
+            <span class="text-4xl rounded-full mb-2">🏖️</span>
+            <h3 class="mb-4 text-[#E8F3EC]">Aposentadoria</h3>
+            <div class="w-full justify-center-2">
+                <span class="span-valor">R$ 45.000,00</span>
+                <span>R$ 300.000,00</span>
+            </div>
+
+            <!--CONTAINER DA BARRA DE PROGRESSO -->
+            <div class="w-[65%] bg-[#333333] rounded-full h-2 md:w-[68%] lg:w-[73%]">
+                <div class="bg-[#F97316] h-2 rounded-full w-[15%] md:w-[15%] lg:w-[15%]"></div>
+            </div>
+
+            <div>
+                <p>Faltam R$ 255.000,00</p>
+            </div>
+        </div>
+
+        <!-- Card 6-->
+        <div class="estrutura-cards">
+            <!--BOTÃO EDITAR E EXCLUIR -->
+            <div class="flex self-end mr-3">
+                <span class="w-7 mr-2 borde bg-amber-50 duration-300 cursor-pointer">✏️</span>
+                <span class="w-7 cursor-pointer border bg-amber-50 duration-300">🗑️</span>
+            </div>
+
+            <!--icone relacionado a meta-->
+            <span class="text-4xl rounded-full mb-2">🤵</span>
+            <h3 class="mb-4 text-[#E8F3EC]">Casamento</h3>
+            <div class="w-full justify-center-2">
+                <span class="span-valor">R$ 5.500,00</span>
+                <span>R$ 20.000,00</span>
+            </div>
+
+            <!--CONTAINER DA BARRA DE PROGRESSO -->
+            <div class="w-[65%] bg-[#333333] rounded-full h-2 md:w-[68%] lg:w-[73%]">
+                <div class="bg-[#F97316] h-2 rounded-full w-[27%] md:w-[27%] lg:w-[27%]"></div>
+            </div>
+
+            <div>
+                <p>Faltam R$ 14.500,00</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ==================== METAS CONCLUÍDAS ==================== -->
+    <section
+        class="grid grid-cols-1 justify-items-center mx-auto max-w-6xl mb-7 px-4 gap-4 mt-0 md:gap-2 md:grid-cols-2 lg:grid-cols-3">
+        <div
+            class="flex justify-between items-center w-100 rounded h-10 mt-6 px-2 col-span-1 md:col-span-2 md:w-full lg:col-span-3 lg:w-full">
+
+            <!--Frase metas em andamento-->
+            <span class="flex items-center h-10 w-50 font-bold text-lg text-amber-50">Metas Concluidas</span>
+
+        </div>
+        
+
+
+        <div class="estrutura-cards">
+
+            <!--icone relacionado a meta-->
+            <span class="text-4xl rounded-full mb-2">🖥️</span>
+            <h3 class="mb-4 text-[#E8F3EC]">Computador Novo</h3>
+            <div class="w-full justify-center-2">
+                <span class="span-valor">R$ 7.000,00</span>
+                <span>R$ 7.000,00</span>
+            </div>
+
+            <!--CONTAINER DA BARRA DE PROGRESSO -->
+            <div class="w-[65%] bg-[#333333] rounded-full h-2 md:w-[68%] lg:w-[73%]">
+                <div class="bg-emerald-500 h-2 rounded-full w-full"></div>
+            </div>
+
+            <div>
+                <p>Meta concluida</p>
+            </div>
+        </div>
+
+
+
+        <div class="estrutura-cards">
+
+            <!--icone relacionado a meta-->
+            <span class="text-4xl rounded-full mb-2">💵</span>
+            <h3 class="mb-4 text-[#E8F3EC]">Reserva de Emergência</h3>
+            <div class="w-full justify-center-2">
+                <span class="span-valor">R$ 8.000,00</span>
+                <span>R$ 8.000,00</span>
+            </div>
+
+            <!--CONTAINER DA BARRA DE PROGRESSO -->
+            <div class="w-[65%] bg-[#333333] rounded-full h-2 md:w-[68%] lg:w-[73%]">
+                <div class="bg-emerald-500 h-2 rounded-full w-full"></div>
+            </div>
+
+            <div>
+                <p>Meta concluida</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--Fazer um sistema de pontos futuramente por cada meta concluida e resgatar premios em uma lista de desejos pessoasl - modo gamificação-->
+
+
+</body>
+
+</html>
