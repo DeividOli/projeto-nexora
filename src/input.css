@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --font-inter: "Inter", sans-serif;
+}
+
 @utility estrutura-cards {
-  @apply flex flex-col w-full max-w-[400px] items-center text-center justify-center w-full h-64 bg-[#1C1C1C] rounded-2xl;
+  @apply flex flex-col w-full max-w-100 items-center text-center justify-center h-64 bg-[#1C1C1C] rounded-2xl;
 }
 
 .span-valor {
